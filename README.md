@@ -25,12 +25,15 @@ The script use boto, so, if you already have aws/credentials file, the script wi
 docker run --restart always -d -p 9150:9150 -e TAG_PROJECT="YOUR_TAG_PROJECT" -e AWS_DEFAULT_REGION="XXXX" -e AWS_ACCESS_KEY_ID="XXXXXX" -e AWS_SECRET_ACCESS_KEY="XXXXX" alanwds/aws-cost-exporter:latest
 
 # Prometheus config
+
+```
 - job_name: aws-cost-exporter
   scrape_interval: 1800s
   scrape_timeout: 60s
   static_configs:
   - targets:
     - localhost:9150
+```
 
 # AWS IAM Policy
 ```
