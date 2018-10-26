@@ -1,4 +1,4 @@
-# AWS Cost Exporter
+# Prometheus AWS Cost Exporter
 
 # Description
 
